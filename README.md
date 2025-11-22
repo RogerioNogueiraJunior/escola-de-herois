@@ -1,4 +1,4 @@
-<img width="1540" height="899" alt="image" src="https://github.com/user-attachments/assets/09f5a05d-201c-41c3-92ec-7a4e715bc1fe" /># 🦸 Escola de Super-Heróis — Sistema de Triagem
+# 🦸 Escola de Super-Heróis — Sistema de Triagem
 Projeto Full Stack que simula uma sala de triagem para novos recrutas: heróis são gerados aleatoriamente, avaliados, designados para turmas ou removidos.
 
 > Este README descreve como configurar e executar a API (backend) e a interface (frontend), os endpoints principais e o fluxo de triagem.
@@ -25,6 +25,8 @@ Projeto Full Stack que simula uma sala de triagem para novos recrutas: heróis s
 O sistema mantém uma coleção `herois` em MongoDB. Heróis têm atributos como `nome`, `poderes`, `turma`, `categoriaPoder` e `tipo` (valores: `Principal`, `Sidekick`, `Indefinido`).
 
 O fluxo central é: gerar herói → triagem (herói com `tipo: Indefinido`) → decisão do usuário (definir `Principal` / `Sidekick` ou deletar). O frontend consome a API REST para realizar essas ações.
+
+<img width="1239" height="739" alt="image" src="https://github.com/user-attachments/assets/adb6354e-94a8-46b3-952d-58d5124a56f5" />
 
 ---
 
@@ -96,8 +98,13 @@ Os endpoints estão montados em `/api/herois` conforme `server.js` e `routes/her
 - `get /api/herois/gerar` - gera um heroi aleatorio
   <img width="1540" height="899" alt="image" src="https://github.com/user-attachments/assets/63cfb047-6367-41e4-bb8c-770f9cb5e89c" />
 - `GET  /api/herois` — listar todos os heróis
-- `POST /api/herois` — criar herói manualmente (envie JSON com `nome`, `poderes`, `turma`, `categoriaPoder`)
+  <img width="1484" height="906" alt="image" src="https://github.com/user-attachments/assets/634a0ff9-3b0a-438b-bcb5-4d71d8a4e721" />
 - `GET  /api/herois/:id` — obter herói por ID
+  <img width="1541" height="864" alt="image" src="https://github.com/user-attachments/assets/545487ff-c00f-4c9e-ba8a-602489c0bcda" />
 - `PUT  /api/herois/:id` — atualizar herói (ex.: definir `tipo`)
+  <img width="1534" height="873" alt="image" src="https://github.com/user-attachments/assets/2d6b9db3-9fca-4828-ae0c-19450046f7e2" />
 - `DELETE /api/herois/:id` — remover herói
+  <img width="1534" height="828" alt="image" src="https://github.com/user-attachments/assets/293487fe-11cb-49cf-bc5c-2e47cdce19ca" />
 - `GET  /api/herois/triagem` — obter o próximo herói com `tipo: Indefinido` (triagem FIFO)
+  <img width="1541" height="846" alt="image" src="https://github.com/user-attachments/assets/55c30803-5b45-4447-9b98-8f49268901ea" />
+
