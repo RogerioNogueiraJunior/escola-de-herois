@@ -1,4 +1,4 @@
-# 🦸 Escola de Super-Heróis — Sistema de Triagem
+<img width="1540" height="899" alt="image" src="https://github.com/user-attachments/assets/09f5a05d-201c-41c3-92ec-7a4e715bc1fe" /># 🦸 Escola de Super-Heróis — Sistema de Triagem
 Projeto Full Stack que simula uma sala de triagem para novos recrutas: heróis são gerados aleatoriamente, avaliados, designados para turmas ou removidos.
 
 > Este README descreve como configurar e executar a API (backend) e a interface (frontend), os endpoints principais e o fluxo de triagem.
@@ -93,10 +93,11 @@ O Vite normalmente abre em `http://localhost:5173` e o `vite.config.js` já tem 
 
 Os endpoints estão montados em `/api/herois` conforme `server.js` e `routes/heroiRoutes.js`.
 
+- `get /api/herois/gerar` - gera um heroi aleatorio
+  <img width="1540" height="899" alt="image" src="https://github.com/user-attachments/assets/63cfb047-6367-41e4-bb8c-770f9cb5e89c" />
 - `GET  /api/herois` — listar todos os heróis
 - `POST /api/herois` — criar herói manualmente (envie JSON com `nome`, `poderes`, `turma`, `categoriaPoder`)
 - `GET  /api/herois/:id` — obter herói por ID
 - `PUT  /api/herois/:id` — atualizar herói (ex.: definir `tipo`)
 - `DELETE /api/herois/:id` — remover herói
-
 - `GET  /api/herois/triagem` — obter o próximo herói com `tipo: Indefinido` (triagem FIFO)
