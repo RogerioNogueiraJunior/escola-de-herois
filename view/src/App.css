@@ -1,0 +1,88 @@
+/* view/src/App.css */
+body{
+  box-sizing: border-box; 
+  background-color: #808cd1;
+}
+
+.sky-high-app {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.main-content-area {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.triagem-area {
+  flex: 1.5; /* Dá mais espaço para a área central */
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.heroi-card {
+  border: 2px solid #3f51b5;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: white;
+}
+
+.botoes-escolha button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-principal {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+
+.btn-principal:hover {
+  background-color: #43a047;
+}
+
+.btn-sidekick {
+  background-color: #ff9800; /* Laranja */
+  color: white;
+}
+
+.btn-sidekick:hover {
+  background-color: #fb8c00;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+.logo {
+    width: 300px;
+    margin-bottom: 20px;
+}
+.btn-vilao {
+    background-color: #dc3545; /* Vermelho forte */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    width: 100%; /* Ocupa a largura total da triagem-area, como os outros botões */
+}
+
+.btn-vilao:hover {
+    background-color: #c82333; /* Vermelho mais escuro no hover */
+}
+
+.btn-vilao:disabled {
+    background-color: #ea868f;
+    cursor: not-allowed;
+}

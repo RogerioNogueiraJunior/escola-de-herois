@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/RogerioNogueiraJunior/escola-de-herois#readme",
   "dependencies": {
+    "@faker-js/faker": "^10.1.0",
     "express": "^5.1.0",
     "mongoose": "^8.20.1"
   }

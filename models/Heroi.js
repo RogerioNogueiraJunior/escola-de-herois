@@ -1,9 +1,8 @@
-// models/Heroi.js
+// models/Heroi.js (Atualizado)
 
 const mongoose = require('mongoose');
 
 const HeroiSchema = new mongoose.Schema({
-  // ... (o conteúdo do seu HeroiSchema, como definido antes) ...
   nome: {
     type: String,
     required: true,
@@ -17,10 +16,15 @@ const HeroiSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  categoriaPoder: {
+    type: String,
+    enum: ['Combate', 'Suporte', 'Mente', 'Energia', 'Tecnologia'],
+    required: true,
+  },
   tipo: {
     type: String,
-    enum: ['Principal', 'Sidekick'],
-    default: 'Sidekick',
+    enum: ['Principal', 'Sidekick', 'Indefinido'], // NOVO VALOR
+    default: 'Indefinido', // NOVO PADRÃO
   },
 }, { timestamps: true });
 

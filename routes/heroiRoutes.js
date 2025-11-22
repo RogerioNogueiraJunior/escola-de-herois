@@ -1,22 +1,31 @@
-// routes/heroiRoutes.js
+// routes/heroiRoutes.js (CORRETO)
 
 const express = require('express');
 const router = express.Router();
-const heroiController = require('../controllers/heroiController'); // Importa o Controller
+const heroiController = require('../controllers/heroiController');
 
-// POST /api/herois -> Cria um Herói
-router.post('/', heroiController.createHeroi);
+// ----------------------------------------------------
+// 1. ROTAS ESPECÍFICAS (LITERAIS) - DEVEM VIR PRIMEIRO
+// ----------------------------------------------------
 
-// GET /api/herois -> Lista todos os Heróis
-router.get('/', heroiController.getHerois);
+router.get('/triagem', heroiController.getHeroiIndefinidoEmTriagem); 
+router.get('/gerar', heroiController.generateHeroi); 
+router.get('/turmas', heroiController.getHeroisPorTurma);
 
-// GET /api/herois/:id -> Busca um Herói por ID
+// ----------------------------------------------------
+// 2. ROTAS PRINCIPAIS (CRUD sem ID / Listar Todos)
+// ----------------------------------------------------
+
+router.post('/', heroiController.createHeroi); 
+router.get('/', heroiController.getHerois); // GET para /api/herois
+
+// ----------------------------------------------------
+// 3. ROTAS GENÉRICAS COM PARÂMETRO ID (DEVEM VIR POR ÚLTIMO)
+// ----------------------------------------------------
+
+// Estas rotas usam :id e, portanto, só devem ser verificadas depois das rotas específicas.
 router.get('/:id', heroiController.getHeroiById);
-
-// PUT /api/herois/:id -> Atualiza um Herói
-router.put('/:id', heroiController.updateHeroi);
-
-// DELETE /api/herois/:id -> Deleta um Herói
+router.put('/:id', heroiController.updateHeroi); // Usada para definir o tipo!
 router.delete('/:id', heroiController.deleteHeroi);
 
 module.exports = router;
